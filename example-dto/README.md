@@ -78,3 +78,6 @@ export class TasksController {
   }
 }
 ```
+
+**Previous Topic:** [NestJs DTO](dto/README.md "NestJs DTO")
+**Next Topic:** [NestJs Pipe](nestjs-pipe/README.md "NestJs Pipe")

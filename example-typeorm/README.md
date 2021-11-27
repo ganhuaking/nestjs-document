@@ -45,7 +45,7 @@ In this part, Notice following points:
 
 5. **autoloadEntity** property if this set to true, the entity model could be separated into different module, and autoload load into root module
 
-6. In this example we use hardcode this property into the setup, but later in [NestJs Config](../config/README.md "NestJs Config") could use Configuration Component to load environment variable dynamically and more securely
+6. In this example we use hardcode this property into the setup, but later in [NestJs Config](/config/README.md "NestJs Config") could use Configuration Component to load environment variable dynamically and more securely
 
 ## create Task Entity
 
@@ -235,3 +235,6 @@ export class TasksController {
   }
 }
 ```
+
+**Previous Topic:** [NestJs with TypeORM](typeorm/README.md "NestJs with TypeORM")
+**Next Topic:** [NestJs Config](config/README.md "NestJs Config")

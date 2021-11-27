@@ -52,3 +52,6 @@ export class TasksController {
 
 
 ![](https://i.imgur.com/6GbrXKT.png)
+
+**Previous Topic:** [Example Module](example-module/README.md "Example Module")
+**Next Topic:** [Example Controller](example-controller/README.md "Example Controller")

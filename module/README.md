@@ -72,3 +72,6 @@ In the above structure, we could implementation with following code:
 })
 export class ForumModule;
 ```
+
+**Previous Topic:** [NestJs Project Layout](layout/README.md "NestJs Project Layout")
+**Next Topic:** [Example Module](example-module/README.md "Example Module")

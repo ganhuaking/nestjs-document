@@ -17,3 +17,6 @@ Can be useful for data validation
 ## Examples DTOs
 
 ![](https://i.imgur.com/rDYJAH9.png)
+
+**Previous Topic:** [Example Service](example-service/README.md "Example Service")
+**Next Topic:** [Example DTO](example-dto/README.md "Example DTO")
