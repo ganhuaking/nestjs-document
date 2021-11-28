@@ -2,7 +2,7 @@
 
 Lets start create a todo-api-server
 
-[中文版](layout/README-zh_TW.md "中文版")
+[中文版](example-module/README-zh_TW.md "中文版")
 ## architecture
 
 ![](https://i.imgur.com/eV0idop.png)
