@@ -27,7 +27,7 @@ And PostModule and CommentModule could also be compose of UserProfileModule at t
 
 ## Structure of NestJs Module
 This is the NestJs module syntax structure:
-```typescript==
+```typescript
 @Module({
   imports: [], // for imports other modules
   controllers: [], // for setup controllers for handles http request

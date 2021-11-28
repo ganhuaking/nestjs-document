@@ -1,5 +1,6 @@
 # How to use NestJs
 
+[中文版](usage/README-zh_TW.md "中文版")
 ## nestjs-cli tool installation
 
 for npm user:

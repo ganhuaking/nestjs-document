@@ -1,17 +1,17 @@
-# NestJs Learning document
+# NestJs 學習文件
 
-> This repository is for [NestJs](https://nestjs.com/) learning with todo-api-server example
+> 這個文件主要是紀錄 [NestJs](https://nestjs.com/) 學習的內容並且以 todo-api-server 的 RESTFul api Server 作為範例
 
-[中文版](README-zh_TW.md "中文版")
+[English Version](README.md "English Version")
 
-## OutLet
+## 大綱
 
-* [What is NestJs](nestjs/README.md "What is NestJs")
-* [Why use NestJs](why/README.md "Why use NestJs")
-* [How to use NestJs](usage/README.md "How to use NestJs")
-* [NestJs Project Layout](layout/README.md "NestJs Project Layout")
-* [NestJs Module](module/README.md "NestJs Module")
-* [Example Module](example-module/README.md "Example Module")
+* [NestJs 是什麼](nestjs/README-zh_TW.md "NestJs 是什麼")
+* [使用 NestJs 的優缺點](why/README-zh_TW.md "使用 NestJs 的優缺點")
+* [如何使用 NestJs](usage/README-zh_TW.md "如何使用 NestJs")
+* [NestJs 專案結構](layout/README-zh_TW.md "NestJs 專案結構")
+* [NestJs Module](module/README-zh_TW.md "NestJs Module")
+* [Module 範例](example-module/README-zh_TW.md "Module 範例")
 * [NestJs Controller](controller/README.md "NestJs Controller")
 * [Example Controller](example-controller/README.md "Example Controller")
 * [NestJs Service](service/README.md "NestJs Service")

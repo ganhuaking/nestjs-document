@@ -1,15 +1,16 @@
 # todo-api-server
 
-Lets start create a todo-api-server
+讓我們建立一個 todo-api-server
 
-[中文版](layout/README-zh_TW.md "中文版")
-## architecture
+[English Version](example-module/README.md "English Version")
+
+## 軟體架構
 
 ![](https://i.imgur.com/eV0idop.png)
 
 ![](https://i.imgur.com/Osa727R.png)
 
-## api view
+## api 結構
 
 ### Tasks
 
@@ -28,9 +29,9 @@ Lets start create a todo-api-server
 | auth/signup       | POST   | Sign up                   |
 | auth/signin       | POST   | Sign in                   |
 
-## generate task and auth module
+## 建立 task 與 auth Module
 
-### clear not used file on todo-api-server
+###  清除 todo-api-server 中沒有用到的檔案
 
 ```shell
 cd ~/todo-api-server
@@ -39,7 +40,7 @@ rm src/app.service.ts
 rm src/app.controller.spec.ts
 ```
 
-### remove not used import from src/app.module.ts
+### 移除 src/app.module.ts 中沒用到的引用
 
 src/app.module.ts
 ```typescript
@@ -50,15 +51,15 @@ import { Module } from '@nestjs/common';
 })
 export class AppModule {}
 ```
-### make sure the the app still work
+### 確認 app 在清除檔案後仍然可以正常運行
 
 ```shell
 npm run start:dev
 ```
-will see the green build
+正常會看到以下正常建立 log
 ![](https://i.imgur.com/G6EAz1m.png)
 
-### generate tasks module with nestjs-cli
+### 使用 nestjs-cli 建立 tasks Module
 
 ```shell
 nest g module tasks
@@ -67,7 +68,7 @@ nest g module tasks
 ![](https://i.imgur.com/XPJuHq0.png)
 
 
-### generate auth module with nestjs-cli
+### 使用 nestjs-cli 建立 tasks Module
 
 ```shell
 nest g module auth
@@ -78,5 +79,5 @@ nest g module auth
 
 ![](https://i.imgur.com/GCN4HWS.png)
 
-**Previous Topic:** [NestJs Module](module/README.md "NestJs Module")
-**Next Topic:** [NestJs Controller](controller/README.md "NestJs Controller")
+**上一個主題:** [NestJs Module](module/README-zh_TW.md "NestJs Module")
+**下一個主題:** [NestJs Controller](controller/README.md "NestJs Controller")

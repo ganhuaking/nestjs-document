@@ -1,13 +1,15 @@
 # NestJs Project Layout
 
+[中文版](layout/README-zh_TW.md "中文版")
 ## Introduction
 
 In this section, we will create a whole new nestjs project and see the structure of nestjs project
 
 ## Create a new project
-Lets use the nest-cli to generate a new nestjs project with name todo-api-server
 
-```shell=
+Lets use the nestjs-cli to generate a new nestjs project with name todo-api-server
+
+```shell
 nest new todo-api-server
 ```
 ## project layout
@@ -16,7 +18,7 @@ layout as follow picture:
 
 ![](https://i.imgur.com/nJJmpEL.png)
 
-```yaml==
+```yaml
 todo-api-server
 - node_modules
 - src
@@ -78,7 +80,7 @@ for nodejs installed module binary
 
 ### src/main.ts
 
-```typescript==
+```typescript
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
