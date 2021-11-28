@@ -1,4 +1,6 @@
 # NestJs Module
+
+[English Version](module/README.md)
 ## 參考文件
 [NestJs-Zero-to-Hero Udemy Course](https://www.udemy.com/course/nestjs-zero-to-hero/learn/lecture/26680748#overview)
 
