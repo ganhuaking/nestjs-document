@@ -1,5 +1,7 @@
 # NestJs with TypeORM
 
+[中文版](typeorm/README-zh_TW.md "中文版")
+
 ## ORM(Object Relational Mapping)
 
 A technique that let you query and manipulate data from a database, using an object-oriented paradigm.

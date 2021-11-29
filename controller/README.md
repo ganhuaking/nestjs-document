@@ -1,5 +1,7 @@
 # NestJs Controller
 
+[中文版](controller/README-zh_TW.md "中文版")
+
 ## Reference Document
 
 [Nestjs zero-to-hero Controller](https://www.udemy.com/course/nestjs-zero-to-hero/learn/lecture/26680754#overview)

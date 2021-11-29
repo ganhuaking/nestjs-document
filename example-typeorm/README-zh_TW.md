@@ -1,14 +1,14 @@
-# todo-api-server with TypeORM
+# todo-api-server 使用 TypeORM 範例
 
-[中文版](example-typeorm/README-zh_TW.md "中文版")
+[English Version](example-typeorm/README.md "English Version")
 
-## install typeorm @nestjs/typeorm pg
+## 安裝 typeorm @nestjs/typeorm pg
 
 ```shell
 npm i -S typeorm @nestjs/typeorm pg
 ```
 
-## setup connection with TypeORM
+## 設定 TypeORM 連線
 
 ```typescript
 import { Module } from '@nestjs/common';
@@ -33,25 +33,25 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 })
 export class AppModule {}
 ```
-These setup could be found from [typeorm offical document](https://typeorm.io/#/)
 
-In this part, Notice following points:
+這些設定值可以從 [typeorm 官網](https://typeorm.io/#/) 找到
 
-1. TypeOrmModule.forRoot means this setup will be global
+在這個部份有以下幾個重點：
 
-2. **type** property stand for db type, we choose postgres for Postgresql DB
+1. TypeOrmModule.forRoot 代表這個設定會套用到全域
 
-3. **database** property stand for connection database, this database need to created first
+2. **type** 屬性代表資料庫類型,  因為使用 Postgresql DB 所以選用 postgres
 
-4. **synchronize** property if this set to true, entity model will synchronize with table columns 
+3. **database** 屬性代表要連線的資料庫名稱, 這個資料庫必須要先建立好否則會連線不到
 
-5. **autoloadEntity** property if this set to true, the entity model could be separated into different module, and autoload load into root module
+4. **synchronize** 屬性如果設定為 true, entity 模型會自動同步到與 entity 名稱相同的資料表欄位
 
-6. In this example we use hardcode this property into the setup, but later in [NestJs Config](/config/README.md "NestJs Config") could use Configuration Component to load environment variable dynamically and more securely
+5. **autoloadEntity** 屬性如果設為 true, entity 模型可以分散寫在不同的 Module 並且會自動載入主要的 Module
+6. 在這個範例我們使用直接寫死參數的方法, 但之後在 [NestJs Config](/config/README.md "NestJs Config") 會使用 NestJs ConfigModule 這個元件來載入環境參數這種比較安全的作法
 
-## create Task Entity
+## 建立 Task Entity
 
-create task-status.enum for TaskStatus enum
+建立 task-status.enum 
 ```typescript
 export enum TaskStatus {
   OPEN = 'OPEN',
@@ -59,7 +59,8 @@ export enum TaskStatus {
   DONE = 'DONE',
 }
 ```
-change origin task.model to task.entity.ts
+
+建立 task.entity.ts
 
 ```typescript
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
@@ -83,21 +84,17 @@ export class Task {
 
 ### Active Record
 
-Using the Active Record approach, you define all your query methods inside the model itself, and you save, remove, and load objects using model methods.
-
-Simply said, the Active Record pattern is an approach to access your database within your models. You can read more about the Active Record pattern.
+使用 Active Record 方法, 也就是透過 Entity 模型來直接操作資料庫.
 
 ### Data Mapper
 
-Using the Data Mapper approach, you define all your query methods in separate classes called "repositories", and you save, remove, and load objects using repositories. In data mapper your entities are very dumb - they just define their properties and may have some "dummy" methods.
-
-Simply said, data mapper is an approach to access your database within repositories instead of models. 
+使用 Data Mapper 方法, 會除了定義 Entity 模型來設定資料表欄位外, 會額外把存取資料庫的方法定義在獨立出來一個叫作 Repository 的物件. 也就是透過 Repository 來做真正資料庫操作, Entity 模組只是用來規範資料表欄位
 
 ## TasksRepository
 
-### We choose Data Mapper pattern for more abstraction and better test
+### 我們為了更抽象化以及方便測試所以使用 Data Mapper 方式
 
-setup TasksRespotiory
+設定 TasksRespotiory
 
 ```typescript
 import { EntityRepository, Repository } from 'typeorm';
@@ -105,9 +102,10 @@ import { Task } from './task.entity';
 @EntityRepository(Task)
 export class TasksRepository extends Repository<Task> {}
 ```
-Notice that @EntityRepository() decorator specify mapping which entity is Repostiory is for
 
-### load the TasksRepository into the Task module
+要注意的是 @EntityRepository() 裝飾子用來指定 Repository 要對應到哪一個 Entity
+
+### 把 TasksRepository 引入 Task module
 
 ```typescript
 import { Module } from '@nestjs/common';
@@ -124,8 +122,10 @@ import { TasksService } from './tasks.service';
 export class TasksModule {}
 ```
 
-### Inject TasksRepository into TasksService with @InjectRepository decorator
-remove origin tasks array
+### 使用 @InjectRepository 裝飾子把 TasksRepository 注入 TasksService 
+
+移除原本的 tasks 陣列
+
 ```typescript
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Task } from './task.entity';
@@ -147,7 +147,7 @@ export class TasksService {
 }
 ```
 
-### implement createTask method in TaskRepository
+### 實作 TaskRepository.createTask 方法
 
 ```typescript
 import { EntityRepository, Repository } from 'typeorm';
@@ -169,7 +169,7 @@ export class TasksRepository extends Repository<Task> {
   }
 }
 ```
-### change TasksService.createTask TasksController POST /tasks handler
+### 修改 TasksService.createTask 與 TasksController POST /tasks handler
 
 TasksService
 ```typescript
@@ -238,5 +238,5 @@ export class TasksController {
 }
 ```
 
-**Previous Topic:** [NestJs with TypeORM](typeorm/README.md "NestJs with TypeORM")
-**Next Topic:** [NestJs Config](config/README.md "NestJs Config")
+**上一個主題:** [NestJs with TypeORM](typeorm/README-zh_TW.md "NestJs with TypeORM")
+**下一個主題:** [NestJs Config](config/README-zh_TW.md "NestJs Config")

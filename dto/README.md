@@ -1,5 +1,7 @@
 # NestJs DTO
 
+[中文版](dto/README-zh_TW.md "中文版")
+
 ## Data Transfer Object
 
 A DTO is an object that defines how the data will be sent over the network
@@ -10,9 +12,11 @@ Result in increased performance
 
 Can be useful for data validation
 
-## DTO could be used interface or class to be defined
+## DTO syntax rule in NestJs 
 
-**however, it's better to use class to defined because interface could not be refered in runtime**
+DTO could be used interface or class to be defined
+
+However, it's better to use **class** to defined because interface could not be refered in runtime
 
 ## Examples DTOs
 

@@ -1,5 +1,7 @@
 # NestJs Pipe
 
+[中文版](nestjs-pipe/README-zh_TW.md "中文版")
+
 ## Referenced Document
 
 [NestJs From Zero to Hero Course: NestJs Pipe](https://www.udemy.com/course/nestjs-zero-to-hero/learn/lecture/26681372#overview)
@@ -30,6 +32,8 @@ The transform() method accepts 2 parameters:
 
 value: the value of the processed arugment
 metadata(optional): an object containing metadata about the argument.
+
+## Levels of Nestjs Pipe
 
 Pipes could be consume in different ways:
 

@@ -1,17 +1,19 @@
 # NestJs Config
 
-[中文版](config/README-zh_TW.md "中文版")
+[English Version](config/README.md "English Version")
 
-Usually, something that is sensitive, like JWT_SECRET or Database connection credential we will not hardcode as previous setup int source code, but using environment variable to setup when runtime.
+一般來說, 有些機敏資料比如 JWT_SECRET 或是資料庫連線設定, 不會直接寫死在原始碼裏面, 而是使用環境參數的方式在程式執行的時候帶入
 
-NestJs provide a component called Config that can read environment variable setup from config file, like .env
+NestJs 提供了一個元件叫作 ConfigModule 可以用來讀取環境變數或環境參數設定檔比如 .env 檔案
 
-## install package for use NestJs config
+## 安裝 NestJs config 所需要的套件
 
 ```shell
 npm i -S @nestjs/config
 ```
-## make .env.stage.dev file
+
+## 建立 .env.stage.dev
+
 ```yaml
 DB_DATABASE=task-management
 DB_USERNAME=admin
@@ -20,7 +22,9 @@ DB_HOST=localhost
 DB_PORT=5432
 PORT=5566
 ```
-## add ConfigModule in AppModule
+
+## 在 AppModule 引入 ConfigModule
+
 ```typescript
 import { Module } from '@nestjs/common';
 import { TasksModule } from './tasks/tasks.module';
@@ -65,13 +69,13 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 export class AppModule {}
 ```
 
-## install @hapi/joi @types/hapi__joi for .env file schema check
+## 安裝 @hapi/joi @types/hapi__joi for .env 做設定檔組態檢查
 
 ```shell
 npm i -S @hapi/joi
 npm i -D @types/hapi__joi
 ```
-## generate config.schema.ts
+## 建立 config.schema.ts
 
 ```typescript
 import * as Joi from '@hapi/joi';
@@ -87,7 +91,7 @@ export const configValidationSchema = Joi.object({
 });
 ```
 
-## setup validationSchema config
+## 設定 validationSchema
 
 ```typescript
 import { Module } from '@nestjs/common';
@@ -125,4 +129,4 @@ import { configValidationSchema } from './config.schema';
 export class AppModule {}
 ```
 
-**Previous Topic:** [Example NestJs with TypeORM](example-typeorm/README.md "Example NestJs with TypeORM")
+**上一個主題:** [在 NestJs 使用 TypeORM 的範例](example-typeorm/README-zh_TW.md "在 NestJs 使用 TypeORM 的範例")

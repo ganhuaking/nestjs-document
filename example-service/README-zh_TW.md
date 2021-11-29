@@ -1,31 +1,32 @@
-# todo api server services
+# todo api server Service 範例
 
-Lets start create our TasksService and AuthService
+讓我們來建構 TasksService 與 AuthService
 
-[中文版](example-service/README-zh_TW.md "中文版")
+[English Version](example-service/README.md "English Version")
 
-## create tasks service use nestjs-cli
+## 使用 nestjs-cli 建立 tasks Service 
 
 ```shell==
 nest g service tasks --no-spec
 ```
-**Notice** with --no-spec is for not generate test for service 
+**Notice** 使用 --no-spec 代表不要產生 .spec.ts 測試檔 
 
 ![](https://i.imgur.com/dBUS6Ht.png)
 
-## create auth service use nestjs-cli
+## 使用 nestjs-cli 建立 auth Service
 
 ```shell==
 nest g service auth --no-spec
 ```
-**Notice** with --no-spec is for not generate test for service
+
+**Notice** 使用 --no-spec 代表不要產生 .spec.ts 測試檔
 
 
 ![](https://i.imgur.com/W1QueEf.png)
 
-## TasksService implementation
+## 實作 TasksService
 
-### first inject TasksService into TaskController by constructor
+### 注入 TasksService 到 TaskController 的 constructor
 
 ```typescript
 import { Controller } from '@nestjs/common';
@@ -37,7 +38,7 @@ export class TasksController {
 }
 ```
 
-### Implemtation for getAllTasks with simple array first
+### 實作 getAllTasks
 
 ```typescript
 import { Injectable } from '@nestjs/common';
@@ -52,7 +53,7 @@ export class TasksService {
 }
 ```
 
-### implementation for GET /tasks routes with previous finished TasksService.getAllTasks method
+### 使用 TasksService.getAllTasks 來實作 GET /tasks 路由
 
 ```typescript
 import { Controller, Get } from '@nestjs/common';
@@ -67,7 +68,7 @@ export class TasksController {
   }
 }
 ```
-### for enhance type safety lets define task.module.ts
+### 定義 task.module.ts 來增強資料型別安全性
 
 ```typescript
 export interface Task {
@@ -82,7 +83,8 @@ enum TaskStaus {
   DONE = 'DONE',
 }
 ```
-and modify TasksService as follow
+
+並且修改 TaskService 如下
 
 ```typescript
 import { Injectable } from '@nestjs/common';
@@ -98,5 +100,5 @@ export class TasksService {
 }
 ```
 
-**Previous Topic:** [NestJs Service](service/README.md "NestJs Service")
-**Next Topic:** [NestJs DTO](dto/README.md "NestJs DTO")
+**上一個主題:** [NestJs Service](service/README-zh_TW.md "NestJs Service")
+**下一個主題:** [NestJs DTO](dto/README-zh_TW.md "NestJs DTO")

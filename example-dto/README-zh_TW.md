@@ -1,20 +1,22 @@
-# todo-api server DTO
+# todo-api server DTO 範例
 
-[中文版](example-dto/README-zh_TW.md "中文版")
+[English Version](example-dto/README.md "English Version")
 
 ## CreateTasksDTO
 
-### create a folder named "dto" under tasks folder
+### 在 src/tasks 資料下建立一個名稱為 dto 的新資料架
 
 ```shell
 cd ~/todo-api-server
 mkdir src/tasks/dto
 ```
-### create create-task.dto.ts under the dto folder
+### 在 src/tasks/dto 資料夾下建立 create-task.dto.ts 
 
-for create tasks just need title and description 2 string property
+建立任務只需要 title 跟 description 這兩個字串屬性
 
-and id with use uuid auto generated
+而 id 會使用 uuid 自動建立
+
+所以 CreateTaskDto 如下
 
 src/tasks/dto/create-task.dto.ts
 ```typescript
@@ -24,12 +26,12 @@ export class CreateTaskDto {
 }
 ```
 
-### install uuid node module
+### 安裝 uuid 套件
 
 ```shell
-npm i uuid
+npm i uuid -S
 ```
-### implementation for Tasks.createTask with CreateTaskDto as input
+### 使用 CreateTaskDto 當作輸入參數, 實作 Tasks.createTask
 
 ```typescript
 import { Injectable } from '@nestjs/common';
@@ -59,7 +61,7 @@ export class TasksService {
 
 ```
 
-### implementation for POST /tasks with @Body() CreateTaskDto as input
+###  使用 @Body() CreateTaskDto 當作輸入參數, 實作路由 POST /tasks 
 
 ```typescript
 import { Body, Controller, Get, Post } from '@nestjs/common';
@@ -81,5 +83,5 @@ export class TasksController {
 }
 ```
 
-**Previous Topic:** [NestJs DTO](dto/README.md "NestJs DTO")
-**Next Topic:** [NestJs Pipe](nestjs-pipe/README.md "NestJs Pipe")
+**上一個主題:** [NestJs DTO](dto/README-zh_TW.md "NestJs DTO")
+**下一個主題:** [NestJs Pipe](nestjs-pipe/README-zh_TW.md "NestJs Pipe")

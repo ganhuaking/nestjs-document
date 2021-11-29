@@ -1,16 +1,17 @@
-# todo-api server pipe
+# todo-api server Pipe 範例
 
-[中文版](example-nestjs-pipe/README-zh_TW.md "中文版")
+[English Version](example-nestjs-pipe/README.md "English Version")
 
-## ValidationPipe for createTaskDto
-### first install class-validator and class-transformer
+## 對 createTaskDto 使用 ValidationPipe 
+### 安裝 class-validator 與 class-transformer 這兩個套件
+
 ```shell
 npm i class-validator class-transformer@0.4.0 -S
 ```
 
 [class-validator github](https://github.com/typestack/class-validator)
 
-### add validation for CreateTaskDto
+### 替 CreateTaskDto 加入驗證部份
 
 ```typescript
 import { IsNotEmpty } from 'class-validator';
@@ -22,7 +23,7 @@ export class CreateTaskDto {
 }
 ```
 
-### setup application validationPipe for all incoming request
+### 設定全域 validationPipe 對所有輸入做驗證
 
 ```typescript
 import { ValidationPipe } from '@nestjs/common';
@@ -37,5 +38,5 @@ async function bootstrap() {
 bootstrap();
 ```
 
-**Previous Topic:** [NestJs Pipe](nestjs-pipe/README.md "NestJs Pipe")
-**Next Topic:** [NestJs with TypeORM](typeorm/README.md "NestJs with TypeORM")
+**上一個主題:** [NestJs Pipe](nestjs-pipe/README-zh_TW.md "NestJs Pipe")
+**下一個主題:** [在 NestJs 使用 TypeORM](typeorm/README-zh_TW.md "在 NestJs 使用 TypeORM")
