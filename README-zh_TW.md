@@ -23,4 +23,5 @@
 * [在 NestJs 使用 TypeORM](typeorm/README-zh_TW.md "在 NestJs 使用 TypeORM")
 * [在 NestJs 使用 TypeORM 的範例](example-typeorm/README-zh_TW.md "在 NestJs 使用 TypeORM 的範例")
 * [NestJs Config](config/README-zh_TW.md "NestJs Config")
+* [Entity Relastions](entity-relations/README.md "Entity Relastions")
 * [NestJs UnitTest](nestjs-unit-test/README-zh_TW.md "NestJs UnitTest")

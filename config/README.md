@@ -126,3 +126,4 @@ export class AppModule {}
 ```
 
 **Previous Topic:** [Example NestJs with TypeORM](example-typeorm/README.md "Example NestJs with TypeORM")
+**Next Topic:** [NestJs with JWT](nestjs-with-jwt/README.md "NestJs with JWT")

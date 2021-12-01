@@ -24,4 +24,5 @@
 * [Example NestJs with TypeORM](example-typeorm/README.md "Example NestJs with TypeORM")
 * [NestJs Config](config/README.md "NestJs Config")
 * [NestJs with JWT](nestjs-with-jwt/README.md "NestJs with JWT")
+* [Entity Relastions](entity-relations/README.md "Entity Relastions")
 * [NestJs UnitTest](nestjs-unit-test/README.md "NestJs UnitTest")
